@@ -1,7 +1,6 @@
 
 # Projeto - Feira Paulo Freire
 
-- Neste projeto iremos criar um modelo para portifolio gerado em HTML onde o usuario podera personalizar usando css na forma em que desejar.
 
 
 
