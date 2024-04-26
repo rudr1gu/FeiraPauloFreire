@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+:root{
+    --cor1:#8404D9;
+    --cor2:#5503A6;
+    --cor3:#260273;
+    --cor4:#010440;
+    --cor5:#0D0D0D;
+}
+
+body, html{
+    width: 100vw;
+    height: 100vh;
+    font-family: "Quicksand", sans-serif;
+    font-weight: 600;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(img/pexels-merlin-10874537.jpg);
+    background-position: center;
+    background-size: cover;
+
+}
+
+section#formulario{
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 600px;
+    min-height: 90vh;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid black;
+    border-radius: 20px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.699);
+}
+
+.input {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input input {
+    width: 300px;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    border-bottom: 1px solid #aaa;
+    transition: all 0.3s ease-in-out;
+}
+
+.input>label{
+    margin-left: 10px;
+}
+
+.input input:focus {
+    border:none;
+    outline: none;
+}
+
+.input input:focus + label,
+.input input:valid + label {
+    top: -15px;
+    font-size: 12px;
+    color: white;
+}
+
+.input label {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    font-size: 16px;
+    color: var(--cor4);
+    transition: all 0.3s ease-in-out;
+}
+
+input[type="reset"], input[type="button"] {
+    width: auto;
+    padding: 10px 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--cor2);
+    box-shadow: 5px 5px var(--cor5);
+    color: #fff;
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+}
+
+input[type="reset"]:hover, input[type="button"]:hover {
+    background-color: var(--cor1);
+    box-shadow: none;
+    transition: 2s;
+}
+
+div.btns{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
