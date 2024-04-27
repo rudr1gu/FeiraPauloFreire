@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <title>Formulario - Portifolio</title>
+    <link rel="stylesheet" href="./view/style.css">
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section id="formulario">
+        <form action="/add" method="post">
+            <div class="input">
+                <input type="text" name="name" id="iname" required>
+                <label for="iname"><i class='bx bxs-user-circle'></i> Nome:</label>
+            </div>
+    
+            <div class="input">
+                <input type="text" name="contato" id="icontato" required>
+                <label for="icontato"><i class='bx bxs-envelope'></i> E-mail:</label>
+            </div>
+    
+            <div class="input">
+                <input type="text" name="facebook" id="ifacebook" required>
+                <label for="ifacebook"><i class='bx bxl-facebook-circle' ></i> Facebook:</label>
+            </div>
+    
+            <div class="input">
+                <input type="text" name="instagram" id="iinstagram" required>
+                <label for="iinstagram"><i class='bx bxl-instagram-alt' ></i> Instagram:</label>
+            </div>
+    
+            <div class="input">
+                <input type="text" name="youtube" id="iyoutube" required>
+                <label for="iyoutube"><i class='bx bxl-youtube' ></i> YouTube:</label>
+            </div>
+    
+            <div class="input">
+                <input type="text" name="spoti" id="ispoti" required>
+                <label for="ispoti"><i class='bx bxl-spotify' ></i> Spotify:</label>
+            </div>
+    
+            <div class="input">
+                <input type="text" name="linkedin" id="ilinkedin" required>
+                <label for="ilinkedin"><i class='bx bxl-linkedin' ></i> Linkedin:</label>
+            </div>
+            <div class="input">
+                <input type="text" name="bio" id="ibio" required>
+                <label for="ibio">Mini Biografia:</label>
+            </div>
+    
+            <div class="btns">
+                <input type="reset" value="Limpar">
+                <input type="submit" value="Enviar" id="btnEnviar">
+            </div>
+            
+        </form>
+    </section>
+    
+
+    <script type="module" src="./controllers/main.js"></script>
+    
+</body>
+</html>

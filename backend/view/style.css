@@ -86,7 +86,7 @@ section#formulario{
     transition: all 0.3s ease-in-out;
 }
 
-input[type="reset"], input[type="button"] {
+input[type="reset"], input[type="submit"] {
     width: auto;
     padding: 10px 20px;
     margin-top: 20px;
@@ -100,7 +100,7 @@ input[type="reset"], input[type="button"] {
     transition: all 0.3s ease-in-out;
 }
 
-input[type="reset"]:hover, input[type="button"]:hover {
+input[type="reset"]:hover, input[type="submit"]:hover {
     background-color: var(--cor1);
     box-shadow: none;
     transition: 2s;
