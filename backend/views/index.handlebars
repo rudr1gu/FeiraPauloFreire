@@ -1,0 +1,47 @@
+<style>
+    .portifolio{
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 60vw;
+        height: 50vh;
+        border: 1px solid black;
+        overflow: hidden;
+        text-align: center;
+    }
+    div{
+        margin: auto;
+        width: 60px;
+        height: 60px;
+        border: 1px solid black;
+        border-radius: 50%;
+    }
+
+    p, a{
+        overflow-wrap: break-word;
+        text-align: center;
+        margin: 7px;
+    }
+
+    a:hover{
+        background-color: blue;
+    }
+   
+</style>
+
+<section class="portifolio">
+    <div>
+    </div>
+    {{#each posts}}
+    
+        <h2>{{nome}}</h2>
+        <p>{{bio}}</p>
+        <p>{{email}}</p>
+        <a target="_blank" href={{fb}}>Facebook</a>
+        <a target="_blank" href={{insta}}>Instagram</a>
+        <a target="_blank" href={{spotify}}>Spotify</a>
+        <a target="_blank" href={{linkedin}}>Linkedin</a>
+        
+    {{/each}}
+</section>

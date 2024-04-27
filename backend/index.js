@@ -1,11 +1,22 @@
 const express = require("express");
+const exphbs = require("express-handlebars");
 const app = express();
+const handlebars = require('express-handlebars');
 const Post = require('./models/Post');
 const path = require('path');
 
-// Servindo arquivos estáticos da pasta 'view' e 'controllers'
-app.use('/view', express.static(path.join(__dirname, 'view')));
+// Servindo arquivos estáticos da pasta 'view' e 'controllers' 
+app.use('/views', express.static(path.join(__dirname, 'views')));
 app.use('/controllers', express.static(path.join(__dirname, 'controllers')));
+app.use('/view/img', express.static(path.join(__dirname, 'img')));
+
+// Configurando o Handlebars como mecanismo de template
+app.engine('handlebars', handlebars.engine({defaultLayout: 'main', runtimeOptions: {
+    allowProtoPropertiesByDefault: true,
+    allowProtoMethodsByDefault: true,
+},
+}))
+app.set('view engine', 'handlebars')
 
 
 //body parser
@@ -14,7 +25,14 @@ app.use(express.json())
 
 //rotas
 app.get("/", function(req, res){
-    res.sendFile(__dirname +'/index.html')
+    Post.findAll({
+        order: [['createdAt', 'DESC']], // Ordena os posts
+        limit: 1 // Limita resultado
+    }).then(function(posts){
+        res.render('index', {posts: posts})
+    }).catch(function(e){
+        console.log("erro" + e)
+    })
 })
 
 app.get('/cadastro', function(req, res){
