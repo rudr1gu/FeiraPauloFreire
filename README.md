@@ -1,10 +1,6 @@
 
 # Projeto - Feira Paulo Freire
 
-
-
-
-
 ## Autores
 
 - [@rudr1gu](https://www.github.com/rudr1gu)

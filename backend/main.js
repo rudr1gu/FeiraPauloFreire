@@ -1,3 +1,35 @@
+const Sequelize = require('sequelize');
+const sequelize = new Sequelize('testeNode','rodrigo','rudr1gu', {
+    host: "localhost",
+    dialect: "mysql"
+})
+
+const Usuarios = sequelize.define('userTeste2',{
+    nome: {
+        type: Sequelize.STRING
+    },
+    email: {
+        type: Sequelize.STRING
+    },
+    bio: {
+        type: Sequelize.TEXT
+    },
+    fb: {
+        type: Sequelize.STRING
+    },
+    insta: {
+        type: Sequelize.STRING
+    },
+    spotify: {
+        type: Sequelize.STRING
+    },
+    linkedin: {
+        type: Sequelize.STRING
+    }
+})
+
+// Usuarios.sync({force: true})
+
 const btnEnviar = document.getElementById("btnEnviar");
 
 let nome = document.getElementById("iname");
@@ -17,19 +49,14 @@ btnEnviar.addEventListener('click', ()=>{
     spoti = spoti.value;
     linkedin = linkedin.value;
 
-    if(nome.length === 0){
-        alert("[ERRO] Preencha o campo nome.")
-    }
-    else if(contato.length === 0){
-        alert("[ERRO] Preencha o campo e-mail.")
-    }
-    else if(bio.length === 0){
-        alert("[ERRO] Preencha o campo Biografia.")
-    }
-    else{
-        let cadastro = [nome, contato, bio, fb, insta, spoti, linkedin];
-        console.log(cadastro);
-    }
+    Usuarios.create({
+        nome: nome,
+        email: contato,
+        bio: bio,
+        fb: fb,
+        insta: insta,
+        spotify: spoti,
+        linkedin: linkedin
+    })
 
-    return false;
 })
