@@ -18,6 +18,7 @@ app.use(express.json())
 
 // Servindo arquivos estáticos da pasta 'views' e 'controllers' 
 app.use(express.static(path.join(__dirname, 'views')));
+app.use('/views', express.static(path.join(__dirname,'views')));
 app.use('/controllers', express.static(path.join(__dirname, 'controllers')));
 
 
