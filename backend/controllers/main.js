@@ -17,14 +17,5 @@ btnEnviar.addEventListener('click', ()=>{
     spoti = spoti.value;
     linkedin = linkedin.value;
 
-    Usuarios.create({
-        nome: nome,
-        email: contato,
-        bio: bio,
-        fb: fb,
-        insta: insta,
-        spotify: spoti,
-        linkedin: linkedin
-    })
-
+    let cadastro = []
 })
