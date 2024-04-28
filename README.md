@@ -1,4 +1,3 @@
-
 # Projeto - Feira Paulo Freire
 
 ## Autores

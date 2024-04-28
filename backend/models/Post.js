@@ -1,19 +1,22 @@
 const db = require('./db')
 
-const Post = db.sequelize.define('Redes',{
+const Post = db.sequelize.define('portifolio',{
     nome: {
         type: db.Sequelize.STRING
     },
     email: {
         type: db.Sequelize.STRING
     },
-    bio: {
+    biografia: {
         type: db.Sequelize.TEXT
     },
-    fb: {
+    facebook: {
         type: db.Sequelize.STRING
     },
-    insta: {
+    instagram: {
+        type: db.Sequelize.STRING
+    },
+    youtube:{
         type: db.Sequelize.STRING
     },
     spotify: {

@@ -1,4 +1,13 @@
 <style>
+    .corpo{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: bisque;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
     .portifolio{
         background-color: aquamarine;
         display: flex;
@@ -12,10 +21,13 @@
     }
     div{
         margin: auto;
-        width: 60px;
-        height: 60px;
+        width: 80px;
+        height: 80px;
         border: 1px solid black;
         border-radius: 50%;
+        background-image: url(img/micaojakson.jpg);
+        background-size: cover;
+        background-position: center;
     }
 
     p, a{
@@ -30,18 +42,22 @@
    
 </style>
 
-<section class="portifolio">
-    <div>
-    </div>
-    {{#each posts}}
+<section class="corpo">
+    <section class="portifolio">
+        <div>
+        </div>
     
-        <h2>{{nome}}</h2>
-        <p>{{bio}}</p>
-        <p>{{email}}</p>
-        <a target="_blank" href={{fb}}>Facebook</a>
-        <a target="_blank" href={{insta}}>Instagram</a>
-        <a target="_blank" href={{spotify}}>Spotify</a>
-        <a target="_blank" href={{linkedin}}>Linkedin</a>
-        
-    {{/each}}
+        {{#each posts}}
+    
+            <h2>{{nome}}</h2>
+            <p>{{biografia}}</p>
+            <p>{{email}}</p>
+            <a target="_blank" href={{facebook}}><i class='bx bxl-facebook'></i> Facebook</a>
+            <a target="_blank" href={{instagram}}><i class='bx bxl-instagram' ></i> Instagram</a>
+            <a target="_blank" href={{youtube}}><i class='bx bxl-youtube' ></i> YouTube</a>
+            <a target="_blank" href={{spotify}}><i class='bx bxl-spotify'></i> Spotify</a>
+            <a target="_blank" href={{linkedin}}><i class='bx bxl-linkedin' ></i> Linkedin</a>
+    
+        {{/each}}
+    </section>
 </section>
