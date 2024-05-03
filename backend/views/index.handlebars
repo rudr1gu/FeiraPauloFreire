@@ -3,61 +3,94 @@
         position: absolute;
         width: 100%;
         height: 100%;
-        background-color: bisque;
+        background-color: #CDD5C6;
         display: flex;
         justify-content: center;
         align-items: center;
+        font-family: "Quicksand", sans-serif;
+       
     }
     .portifolio{
-        background-color: aquamarine;
+        background-color: #B7BCBF;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        width: 60vw;
-        height: 50vh;
-        border: 1px solid black;
+        width: 550px;
+        min-height: 75vh;
         overflow: hidden;
         text-align: center;
+        
+        backdrop-filter: blur(10px);
+        border-radius: 20px;
+        box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.699);
+         color: #000000b2;
     }
-    div{
+    div.avatar{
         margin: auto;
-        width: 80px;
-        height: 80px;
-        border: 1px solid black;
-        border-radius: 50%;
-        background-image: url(img/micaojakson.jpg);
-        background-size: cover;
-        background-position: center;
+        margin-top: 80px;
+        margin-bottom: 30px;
+        width: 130px;
+        height: 130px;
+        border-radius: 10%;
+        background-image: url(img/avatares/13.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;   
     }
 
     p, a{
         overflow-wrap: break-word;
         text-align: center;
-        margin: 7px;
+        margin: 4px;
+        border: none;
+        
     }
 
     a:hover{
-        background-color: blue;
+        background-color: rgba(255, 255, 255, 0.336);
+        backdrop-filter: blur(3px);
+        border-radius: 20px;
+        
     }
+    div.redes{
+        display: flex;
+        flex-direction: row;
+        margin: auto;
+        margin-top: 30px;
+        font-size: 30pt;
+    }
+    a{
+       color: #000000b2;
+       text-shadow: 0px 1px 1px rgba(148, 124, 102, 0.76);
+    }
+    h2{
+        text-shadow: 0px 1px 2px rgba(148, 124, 102, 0.76);
+    }
+
    
 </style>
 
 <section class="corpo">
     <section class="portifolio">
-        <div>
-        </div>
+        <div class="avatar"> </div>
     
         {{#each posts}}
     
             <h2>{{nome}}</h2>
             <p>{{biografia}}</p>
-            <p>{{email}}</p>
-            <a target="_blank" href={{facebook}}><i class='bx bxl-facebook'></i> Facebook</a>
-            <a target="_blank" href={{instagram}}><i class='bx bxl-instagram' ></i> Instagram</a>
-            <a target="_blank" href={{youtube}}><i class='bx bxl-youtube' ></i> YouTube</a>
-            <a target="_blank" href={{spotify}}><i class='bx bxl-spotify'></i> Spotify</a>
-            <a target="_blank" href={{linkedin}}><i class='bx bxl-linkedin' ></i> Linkedin</a>
-    
+
+            <div>
+                {{!-- campos de interesse --}}
+            </div>
+            
+            <div class="redes">
+                <a target="_blank" href={{email}}><i class='bx bxs-envelope' ></i></a>
+                <a target="_blank" href={{facebook}}><i class='bx bxl-facebook'></i> </a>
+                <a target="_blank" href={{instagram}}><i class='bx bxl-instagram-alt'></i> </a>
+                <a target="_blank" href={{youtube}}><i class='bx bxl-whatsapp-square' ></i> </a>
+                <a target="_blank" href={{spotify}}><i class='bx bxl-twitter'></i> </a>
+                <a target="_blank" href={{linkedin}}><i class='bx bxl-linkedin' ></i> </a>
+            </div>
         {{/each}}
     </section>
 </section>

@@ -28,7 +28,6 @@ body{
     background-image: url(img/plano-de-fundo-texturizado-de-concreto-vinheta-rustica-marrom.jpg);
     background-position: center;
     background-size: cover;
-
 }
 
 section#formulario{
@@ -118,3 +117,4 @@ h1{
     text-shadow: 0px 2px 5px rgba(148, 124, 102, 0.76);
 
 }
+
