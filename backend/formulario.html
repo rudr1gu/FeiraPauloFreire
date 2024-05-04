@@ -70,35 +70,13 @@
     
             <div class="btns">
                 <input type="reset" value="Limpar">
-                <input type="submit" value="Enviar" id="btnEnviar" onclick="collectButtonValues()">
+                <input type="submit" value="Enviar" id="btnEnviar">
             </div>
         </form>
         <div id="res"></div>       
     </section>
 
-    <script>
-      function setupButtonHandlers() {
-            const buttons = document.querySelectorAll('.inte');
-            buttons.forEach(button => {
-                button.addEventListener('click', function() {
-                    if (!button.disabled) { // Verifica se o botão não está desabilitado
-                        button.disabled = true; // Desabilita o botão após clicar
-                        // Crie um campo oculto com o valor do botão e adicione-o ao formulário
-                        const input = document.createElement('input');
-                        input.type = 'hidden';
-                        input.name = button.name;
-                        input.value = button.value;
-                        document.getElementById('myForm').appendChild(input);
-                    }
-                });
-            });
-        }
+    <script src="./controllers/main.js"  defer></script>
 
-        // Chame a função ao carregar a página
-        document.addEventListener('DOMContentLoaded', setupButtonHandlers);
-        </script> 
-
-    <script src="./controllers/main.js" type="module" defer></script>
-    
 </body>
 </html>
