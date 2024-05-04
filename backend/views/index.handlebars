@@ -66,9 +66,12 @@
     h2{
         text-shadow: 0px 1px 2px rgba(148, 124, 102, 0.76);
     }
-
-   
 </style>
+
+{{!-- icones --}}
+{{!-- https://fontawesome.com/ --}}
+{{!-- https://boxicons.com --}}
+
 
 <section class="corpo">
     <section class="portifolio">
@@ -79,7 +82,7 @@
             <h2>{{nome}}</h2>
             <p>{{biografia}}</p>
 
-            <div>
+            <div id="res">
                 {{!-- campos de interesse --}}
             </div>
             
@@ -87,10 +90,12 @@
                 <a target="_blank" href={{email}}><i class='bx bxs-envelope' ></i></a>
                 <a target="_blank" href={{facebook}}><i class='bx bxl-facebook'></i> </a>
                 <a target="_blank" href={{instagram}}><i class='bx bxl-instagram-alt'></i> </a>
-                <a target="_blank" href={{youtube}}><i class='bx bxl-whatsapp-square' ></i> </a>
+                <a target="_blank" href={{youtube}}><i class="fa-brands fa-square-whatsapp"></i></a>
                 <a target="_blank" href={{spotify}}><i class='bx bxl-twitter'></i> </a>
                 <a target="_blank" href={{linkedin}}><i class='bx bxl-linkedin' ></i> </a>
             </div>
         {{/each}}
     </section>
+
+    <script src="../controllers/main.js" type="module" defer></script>
 </section>

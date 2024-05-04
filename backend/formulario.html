@@ -12,6 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/2ae1cc8b79.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <section id="formulario">
@@ -39,7 +40,7 @@
            
             <div class="input">
                 <input type="text" name="youtube" id="iyoutube" required>
-                <label for="iyoutube"><i class='bx bxl-whatsapp-square' ></i> WhatsApp:</label>
+                <label for="iyoutube"><i class="fa-brands fa-square-whatsapp"></i> WhatsApp:</label>
             </div>
     
             <div class="input">
@@ -52,20 +53,32 @@
                 <label for="ilinkedin"><i class='bx bxl-linkedin' ></i> Linkedin:</label>
             </div>
             <div class="input">
-                <input type="text" name="bio" id="ibio" required>
+                <textarea name="bio" id="ibio" cols="30" rows="5" required></textarea>
                 <label for="ibio">Mini Biografia:</label>
             </div>
+          
     
             <div class="btns">
                 <input type="reset" value="Limpar">
                 <input type="submit" value="Enviar" id="btnEnviar">
             </div>
-            
         </form>
+        <div id="res"></div>
+
+        <div class="campInt">
+            <button class="inte">Esporte</button>
+            <button class="inte">Musica</button>
+            <button class="inte">Filme</button>
+            <button class="inte">Séries</button>
+            <button class="inte">Anime</button>
+            <button class="inte">Praia</button>
+            <button class="inte">Natureza</button>
+        </div>
     </section>
     
+ 
 
-    <script type="module" src="./controllers/main.js"></script>
+    <script src="./controllers/main.js" type="module" defer></script>
     
 </body>
 </html>
