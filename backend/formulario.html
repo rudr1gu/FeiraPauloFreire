@@ -17,7 +17,7 @@
 <body>
     <section id="formulario">
         <h1>Formulário</h1>
-        <form action="/add" method="post">
+        <form action="/add" method="post" id="myForm">
             <div class="input">
                 <input type="text" name="name" id="iname" required>
                 <label for="iname"><i class='bx bxs-user-circle'></i> Nome:</label>
@@ -39,7 +39,7 @@
             </div>
            
             <div class="input">
-                <input type="text" name="youtube" id="iyoutube" required>
+                <input type="text" name="whatsapp" id="iyoutube" required>
                 <label for="iyoutube"><i class="fa-brands fa-square-whatsapp"></i> WhatsApp:</label>
             </div>
     
@@ -56,27 +56,47 @@
                 <textarea name="bio" id="ibio" cols="30" rows="5" required></textarea>
                 <label for="ibio">Mini Biografia:</label>
             </div>
+
+            <div class="campInt">
+                <input type="button" value="Esporte" class="inte" name="esporte" id="btnEsporte">
+                <input type="button" value="Musica"  class="inte" name="musica" id="btnMusica">
+                <input type="button" value="Filme" class="inte" name="filme" id="btnFilme">
+                <input type="button" value="Series" class="inte" name="series" id="btnSeries">
+                <input type="button" value="Anime" class="inte" name="anime" id="btnAnime">
+                <input type="button" value="Praia" class="inte" name="praia" id="btnPraia">
+                <input type="button" value="Natureza" class="inte" name="natureza" id="btnNatureza">
+            </div>
           
     
             <div class="btns">
                 <input type="reset" value="Limpar">
-                <input type="submit" value="Enviar" id="btnEnviar">
+                <input type="submit" value="Enviar" id="btnEnviar" onclick="collectButtonValues()">
             </div>
         </form>
-        <div id="res"></div>
-
-        <div class="campInt">
-            <button class="inte">Esporte</button>
-            <button class="inte">Musica</button>
-            <button class="inte">Filme</button>
-            <button class="inte">Séries</button>
-            <button class="inte">Anime</button>
-            <button class="inte">Praia</button>
-            <button class="inte">Natureza</button>
-        </div>
+        <div id="res"></div>       
     </section>
-    
- 
+
+    <script>
+      function setupButtonHandlers() {
+            const buttons = document.querySelectorAll('.inte');
+            buttons.forEach(button => {
+                button.addEventListener('click', function() {
+                    if (!button.disabled) { // Verifica se o botão não está desabilitado
+                        button.disabled = true; // Desabilita o botão após clicar
+                        // Crie um campo oculto com o valor do botão e adicione-o ao formulário
+                        const input = document.createElement('input');
+                        input.type = 'hidden';
+                        input.name = button.name;
+                        input.value = button.value;
+                        document.getElementById('myForm').appendChild(input);
+                    }
+                });
+            });
+        }
+
+        // Chame a função ao carregar a página
+        document.addEventListener('DOMContentLoaded', setupButtonHandlers);
+        </script> 
 
     <script src="./controllers/main.js" type="module" defer></script>
     
