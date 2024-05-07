@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
+    font-family: "Quicksand", sans-serif;
 }
 
 :root{
@@ -125,5 +126,19 @@ div.campInt{
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    
 }
-
+input.inte{
+    width: 100px;
+    height: 23px;
+    margin: 4px;
+    border: none;
+    border-radius: 7px;
+    background-color: white;
+    font-family: "Quicksand", sans-serif;
+    font-weight: bold;
+}
+h2{
+    color: var(--cor4);
+    
+}
