@@ -1,9 +1,14 @@
 <style>
+    :root{
+        --cor1:#CDD5C6; /*Cor do fundo*/
+        --cor2:#B7BCBF; /* Cor da caixa*/
+        --cor3:#000000b2; /* Cor da fonte*/
+    }
     .corpo{
         position: absolute;
         width: 100%;
         height: 100%;
-        background-color: #CDD5C6;
+        background-color: var(--cor1);
         display: flex;
         justify-content: center;
         align-items: center;
@@ -11,7 +16,7 @@
        
     }
     .portifolio{
-        background-color: #B7BCBF;
+        background-color: var(--cor2);
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -19,11 +24,10 @@
         min-height: 75vh;
         overflow: hidden;
         text-align: center;
-        
         backdrop-filter: blur(10px);
         border-radius: 20px;
         box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.699);
-         color: #000000b2;
+        color: var(--cor3);
     }
     div.avatar{
         margin: auto;
@@ -66,6 +70,18 @@
     h2{
         text-shadow: 0px 1px 2px rgba(148, 124, 102, 0.76);
     }
+    h3{
+        text-shadow: 0px 1px 2px rgba(148, 124, 102, 0.76);
+    }
+    p.inte{
+        
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
 </style>
 
 {{!-- icones --}}
@@ -81,10 +97,16 @@
     
             <h2>{{nome}}</h2>
             <p>{{biografia}}</p>
+            <br>
+            <br>
+
+            <h3> Meus interesses: </h3>
 
             <div id="res">
+               
                 {{!-- campos de interesse --}}
-                <p>{{esporte}} {{musica}} {{filme}} {{series}} {{anime}} {{praia}} 
+                <p class="inte">{{esporte}} {{musica}}
+                 {{filme}} {{series}} {{anime}} {{praia}} 
                     {{natureza}}</p>
             </div>
             

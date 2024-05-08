@@ -38,7 +38,7 @@ section#formulario{
     justify-content: center;
     align-items: center;
     width: 600px;
-    min-height: 90vh;
+    min-height: 95vh;
     background-color: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     border-radius: 20px;
@@ -51,7 +51,7 @@ section#formulario{
 }
 
 .input input, textarea {
-    width: 300px;
+    width: 350px;
     padding: 10px;
     font-size: 16px;
     border: none;
@@ -121,14 +121,13 @@ h1{
 }
 
 div.campInt{
-    width: 300px;
+    width: 350px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    
 }
-input.inte{
+button.inte{
     width: 100px;
     height: 23px;
     margin: 4px;
@@ -137,8 +136,10 @@ input.inte{
     background-color: white;
     font-family: "Quicksand", sans-serif;
     font-weight: bold;
-}
-h2{
-    color: var(--cor4);
     
 }
+h3{
+    color: var(--cor4);
+    text-align: center;
+}
+
