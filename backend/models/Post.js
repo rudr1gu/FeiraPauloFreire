@@ -1,6 +1,6 @@
 const db = require('./db')
 
-const Post = db.sequelize.define('portifolio',{
+const Post = db.sequelize.define('perfil',{
     nome: {
         type: db.Sequelize.STRING
     },
@@ -16,7 +16,7 @@ const Post = db.sequelize.define('portifolio',{
     instagram: {
         type: db.Sequelize.STRING
     },
-    youtube:{
+    whatsapp:{
         type: db.Sequelize.STRING
     },
     spotify: {
@@ -24,9 +24,32 @@ const Post = db.sequelize.define('portifolio',{
     },
     linkedin: {
         type: db.Sequelize.STRING
+    },
+    esporte: {
+        type: db.Sequelize.STRING
+    },
+    musica: {
+        type: db.Sequelize.STRING
+    },
+    filme: {
+        type: db.Sequelize.STRING
+    },
+    series: {
+        type: db.Sequelize.STRING
+    },
+    anime: {
+        type: db.Sequelize.STRING
+    },
+    praia: {
+        type: db.Sequelize.STRING
+    },
+    natureza: {
+        type: db.Sequelize.STRING
     }
+
+
 })
 
-// Post.sync({force: true})
+     //Post.sync({force: true})
 
 module.exports = Post;

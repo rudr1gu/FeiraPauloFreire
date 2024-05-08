@@ -1,63 +1,123 @@
 <style>
+    :root{
+        --cor1:#CDD5C6; /*Cor do fundo*/
+        --cor2:#B7BCBF; /* Cor da caixa*/
+        --cor3:#000000b2; /* Cor da fonte*/
+    }
     .corpo{
         position: absolute;
         width: 100%;
         height: 100%;
-        background-color: bisque;
+        background-color: var(--cor1);
         display: flex;
         justify-content: center;
         align-items: center;
+        font-family: "Quicksand", sans-serif;
+       
     }
     .portifolio{
-        background-color: aquamarine;
+        background-color: var(--cor2);
         display: flex;
         flex-direction: column;
         justify-content: center;
-        width: 60vw;
-        height: 50vh;
-        border: 1px solid black;
+        width: 550px;
+        min-height: 75vh;
         overflow: hidden;
         text-align: center;
+        backdrop-filter: blur(10px);
+        border-radius: 20px;
+        box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.699);
+        color: var(--cor3);
     }
-    div{
+    div.avatar{
         margin: auto;
-        width: 80px;
-        height: 80px;
-        border: 1px solid black;
-        border-radius: 50%;
-        background-image: url(img/micaojakson.jpg);
-        background-size: cover;
-        background-position: center;
+        margin-top: 80px;
+        margin-bottom: 30px;
+        width: 130px;
+        height: 130px;
+        border-radius: 10%;
+        background-image: url(img/avatares/13.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;   
     }
 
     p, a{
         overflow-wrap: break-word;
         text-align: center;
-        margin: 7px;
+        margin: 4px;
+        border: none;
+        
     }
 
     a:hover{
-        background-color: blue;
+        background-color: rgba(255, 255, 255, 0.336);
+        backdrop-filter: blur(3px);
+        border-radius: 20px;
+        
     }
-   
+    div.redes{
+        display: flex;
+        flex-direction: row;
+        margin: auto;
+        margin-top: 30px;
+        font-size: 30pt;
+    }
+    a{
+       color: #000000b2;
+       text-shadow: 0px 1px 1px rgba(148, 124, 102, 0.76);
+    }
+    h2{
+        text-shadow: 0px 1px 2px rgba(148, 124, 102, 0.76);
+    }
+    h3{
+        text-shadow: 0px 1px 2px rgba(148, 124, 102, 0.76);
+    }
+    p.inte{
+        
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
 </style>
+
+{{!-- icones --}}
+{{!-- https://fontawesome.com/ --}}
+{{!-- https://boxicons.com --}}
+
 
 <section class="corpo">
     <section class="portifolio">
-        <div>
-        </div>
+        <div class="avatar"> </div>
     
         {{#each posts}}
     
             <h2>{{nome}}</h2>
             <p>{{biografia}}</p>
-            <p>{{email}}</p>
-            <a target="_blank" href={{facebook}}><i class='bx bxl-facebook'></i> Facebook</a>
-            <a target="_blank" href={{instagram}}><i class='bx bxl-instagram' ></i> Instagram</a>
-            <a target="_blank" href={{youtube}}><i class='bx bxl-youtube' ></i> YouTube</a>
-            <a target="_blank" href={{spotify}}><i class='bx bxl-spotify'></i> Spotify</a>
-            <a target="_blank" href={{linkedin}}><i class='bx bxl-linkedin' ></i> Linkedin</a>
-    
+            <br>
+            <br>
+
+            <h3> Meus interesses: </h3>
+
+            <div id="res">
+               
+                {{!-- campos de interesse --}}
+                <p class="inte">{{esporte}} {{musica}}
+                 {{filme}} {{series}} {{anime}} {{praia}} 
+                    {{natureza}}</p>
+            </div>
+            
+            <div class="redes">
+                <a target="_blank" href=https://gmail.com/{{email}}><i class='bx bxs-envelope' ></i></a>
+                <a target="_blank" href=https://facebook.com/{{facebook}}><i class='bx bxl-facebook'></i> </a>
+                <a target="_blank" href=https://instagram.com/{{instagram}}><i class='bx bxl-instagram-alt'></i> </a>
+                <a target="_blank" href=https://wa.me/+55{{whatsapp}}><i class="fa-brands fa-square-whatsapp"></i></a>
+                <a target="_blank" href=https://twitter.com/{{spotify}}><i class='bx bxl-twitter'></i> </a>
+                <a target="_blank" href=https://linkedin.com/in/{{linkedin}}><i class='bx bxl-linkedin' ></i> </a>
+            </div>
         {{/each}}
     </section>
 </section>

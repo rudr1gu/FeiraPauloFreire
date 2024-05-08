@@ -46,9 +46,16 @@ app.post('/add', function(req, res){
         biografia: req.body.bio,
         facebook: req.body.facebook,
         instagram: req.body.instagram,
-        youtube: req.body.youtube,
+        whatsapp: req.body.whatsapp,
         spotify: req.body.spoti,
-        linkedin: req.body.linkedin
+        linkedin: req.body.linkedin,
+        esporte: req.body.esporte,
+        musica: req.body.musica,
+        filme: req.body.filme,
+        series: req.body.series,
+        anime: req.body.anime,
+        praia: req.body.praia,
+        natureza: req.body.natureza
     }).then(function(){
         res.redirect('/')
     }).catch(function(erro){

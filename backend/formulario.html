@@ -5,17 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta http-equiv="X-UA-Compatible" content="IE=7">
-    <title>Formulario - Portifolio</title>
+    <title>Formulário</title>
     <link rel="stylesheet" href="./views/style.css">
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/2ae1cc8b79.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <section id="formulario">
-        <form action="/add" method="post">
+        <h1>Formulário</h1>
+        <form action="/add" method="post" id="myForm">
             <div class="input">
                 <input type="text" name="name" id="iname" required>
                 <label for="iname"><i class='bx bxs-user-circle'></i> Nome:</label>
@@ -35,36 +37,49 @@
                 <input type="text" name="instagram" id="iinstagram" required>
                 <label for="iinstagram"><i class='bx bxl-instagram-alt' ></i> Instagram:</label>
             </div>
-    
+           
             <div class="input">
-                <input type="text" name="youtube" id="iyoutube" required>
-                <label for="iyoutube"><i class='bx bxl-youtube' ></i> YouTube:</label>
+                <input type="text" name="whatsapp" id="iwhats" required>
+                <label for="iwhats"><i class="fa-brands fa-square-whatsapp"></i> WhatsApp:</label>
             </div>
     
             <div class="input">
                 <input type="text" name="spoti" id="ispoti" required>
-                <label for="ispoti"><i class='bx bxl-spotify' ></i> Spotify:</label>
+                <label for="ispoti"><i class='bx bxl-twitter' ></i> Twitter:</label>
             </div>
-    
+            
             <div class="input">
                 <input type="text" name="linkedin" id="ilinkedin" required>
                 <label for="ilinkedin"><i class='bx bxl-linkedin' ></i> Linkedin:</label>
             </div>
             <div class="input">
-                <input type="text" name="bio" id="ibio" required>
+                <textarea name="bio" id="ibio" cols="30" rows="5" required></textarea>
                 <label for="ibio">Mini Biografia:</label>
             </div>
+
+            <h3> Meus interesses: </h3>
+            <br>
+
+            <div class="campInt">
+                <button  type="button" value="Esportes" class="inte" name="esporte" id="btnEsporte"><i class="fa-solid fa-volleyball"></i> Esportes </button>
+                <button  type="button" value="Música"  class="inte" name="musica" id="btnMusica"><i class="fa-solid fa-music"></i> Música</button>
+                <button  type="button" value="Filmes" class="inte" name="filme" id="btnFilme"> <i class="fa-solid fa-film"></i> Filmes</button>
+                <button  type="button" value="Séries" class="inte" name="series" id="btnSeries"> <i class="fa-solid fa-clapperboard"></i> Séries</button>
+                <button  type="button" value="Animes" class="inte" name="anime" id="btnAnime"> <i class="fa-solid fa-gamepad"></i> Games</button>
+                <button  type="button" value="Praia" class="inte" name="praia" id="btnPraia"> <i class="fa-solid fa-umbrella-beach"></i> Praia</button>
+                <button  type="button" value="Natureza" class="inte" name="natureza" id="btnNatureza"> <i class="fa-solid fa-leaf"></i> Natureza</button>
+            </div>
+          
     
             <div class="btns">
-                <input type="reset" value="Limpar">
+                <input type="reset" value="Limpar" id="cleanBtn">
                 <input type="submit" value="Enviar" id="btnEnviar">
             </div>
-            
         </form>
+        <div id="res"></div>       
     </section>
-    
 
-    <script type="module" src="./controllers/main.js"></script>
-    
+    <script src="./controllers/main.js"  defer></script>
+
 </body>
 </html>

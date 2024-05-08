@@ -1,21 +1,28 @@
-const btnEnviar = document.getElementById("btnEnviar");
+function setupButtonHandlers() {
+    const buttons = document.querySelectorAll('.inte');
+    const clean = document.getElementById("cleanBtn");
 
-let nome = document.getElementById("iname");
-let contato = document.getElementById("icontato");
-let bio = document.getElementById("ibio");
-let fb = document.getElementById("ifacebook");
-let insta = document.getElementById("iinstagram");
-let spoti = document.getElementById("ispoti");
-let linkedin = document.getElementById("ilinkedin");
+    buttons.forEach(button => {
+        button.addEventListener('click', function() {
+            if (!button.disabled) {
+                button.disabled = true;
+                const input = document.createElement('input');
+                input.type = 'hidden';
+                input.name = button.name;
+                input.value = button.value;
+                document.getElementById('myForm').appendChild(input);
+            } 
+        });
+    });
 
-btnEnviar.addEventListener('click', ()=>{
-    nome = nome.value;
-    contato = contato.value;
-    bio = bio.value;
-    fb = fb.value;
-    insta = insta.value;
-    spoti = spoti.value;
-    linkedin = linkedin.value;
+    
+    clean.addEventListener('click', ()=>{
+        buttons.forEach(button => {
+            button.disabled = false;
+            const hiddenInput = document.querySelector(`input[type="hidden"][name="${button.name}"]`);
+            hiddenInput && hiddenInput.remove();
+          });
+    });
+}
 
-    let cadastro = []
-})
+document.addEventListener('DOMContentLoaded', setupButtonHandlers);
