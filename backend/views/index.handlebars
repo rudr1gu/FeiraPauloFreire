@@ -60,21 +60,26 @@
         margin-top: 15px;
         font-size: 30pt;
     }
-    a, h2, h3{
+    a, h2, h3, button{
         text-shadow: 0px 1px 2px rgba(148, 124, 102, 0.76);
         color: var(--cor3);
     }
-    p.inte{
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
+    button.inte{
+        width: 100px;
+        height: 23px;
+        margin: 4px;
+        border: none;
+        border-radius: 25px;
+        background-color: rgba(255, 255, 255, 0.411);
+        font-family: "Quicksand", sans-serif;
+        font-weight: bold;
+        color: var(--cor3);
+        font-size: 12pt;
+        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.333);
     }
     p.email{
         margin-top: 120px;
         font-size: 15pt;
-        
     }
     
 
@@ -101,13 +106,15 @@
             <h3> Meus interesses: </h3>
             <br>
 
-            <div id="res">
-               
+            <div id="res" >
                 {{!-- campos de interesse --}}
-                <p class="inte"> {{esporte}} {{musica}}
-                 {{filme}} {{series}} {{anime}} {{praia}}
-                    {{natureza}} </p>
-                
+                <button class="inte">{{esporte}}</button>
+                <button class="inte">{{musica}}</button>
+                <button class="inte">{{filme}}</button>
+                <button class="inte">{{series}}</button>
+                <button class="inte">{{anime}}</button>
+                <button class="inte">{{praia}}</button>
+                <button class="inte">{{natureza}}</button>
             </div>
             
             <p class="email"><i class='bx bxs-envelope'></i>    {{email}}</p>
