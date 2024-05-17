@@ -27,6 +27,55 @@ Introduzir os conceitos básicos de HTML5 e CSS3.
 Demonstrar de forma prática como essas tecnologias são aplicadas na criação de páginas web.
 Incentivar os participantes a explorar e personalizar suas próprias páginas, promovendo um entendimento prático e intuitivo.
 
+## Instalação
+
+- Instale com npm
+
+```bash
+    git clone https://github.com/Rudr1gu/FeiraPauloFreire.git
+    cd FeiraPauloFreire/src
+    npm install
+```
+### Configure o banco de Dados:
+- Entre na pasta models no arquivo db.js insira o nome do seu usuario do mysql e a sua senha de acesso.
+```bash
+    const sequelize = new Sequelize('portifolio','nomeUsuario','senhaUsuario', {
+    host: "localhost",
+    dialect: "mysql"
+})
+```
+- Crie um banco de dados com o nome "portifolio" no mySQL
+
+```bash
+     create database portifolio;
+```
+
+- Ainda na pasta models entre no arquivo Post.js e na linha 53 remova o comentário da função Post.sync
+
+```bash
+    Post.sync({force: true})
+```
+
+- Pelo cmd entre na pasta models e execute o arquivo Post.js
+
+```bash
+    cd models
+    node Post.js
+```
+
+- Ao rodar esse comando ira criar uma tabela no seu banco de dados, para finalizar vlte no arquivo Post.js e na linha 53 comente novamente o comando:
+
+```bash
+    //Post.sync({force: true})
+```
+ ### Ligando o Localhost
+
+- No cmd entre na pasta src/ e use o comando:
+```bash
+    node index.js
+```
+
+- Acesse o localhost:7200/cadastro no seu browser
 
 ## Autores
 
@@ -38,5 +87,3 @@ Incentivar os participantes a explorar e personalizar suas próprias páginas, p
 - [@vannucchi10](https://github.com/vannucchi10)
 - [@J](https://github.com/Chingubiso890)
 - [@richard2110](https://github.com/Richard2110)
-
-
